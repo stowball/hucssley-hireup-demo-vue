@@ -1,10 +1,4 @@
-@import "hucssley/functions/index";
-@import "hucssley/mixins/index";
-@import "hucssley/variables/index";
-
+@import "hucssley/helpers";
 @import "styles/variables/index";
-
-@import "hucssley/reset/index";
-@import "hucssley/classes/index";
-
+@import "hucssley/styles";
 @import "styles/classes/index";
