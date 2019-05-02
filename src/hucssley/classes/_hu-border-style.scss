@@ -1,0 +1,33 @@
+@each $module in hu-format-modules($hu-border-style-modules) {
+  @each $type, $value in $hu-border-style-types {
+    @each $side-type, $side-properties in $hu-border-color-sides {
+      $side-properties: if($side-properties, $side-properties, $side-type);
+      $class-name: hu-class-name(#{$side-type}-style-#{$type});
+      $value: if($value, $value, $type);
+
+      @include hu-generic($class-name, $module, $hu-border-style-modules) {
+        @each $property in $side-properties {
+          #{$property}-style: $value;
+        }
+      }
+    }
+  }
+}
+
+@if index($hu-border-style-modules, responsive) {
+  @each $bp-scale, $bp-value in $hu-breakpoints {
+    @media (min-width: $bp-value) {
+      @each $scale, $value in $hu-border-style-scale {
+        @each $type, $properties in $hu-border-style-types {
+          $class-name: hu-class-name(#{$side-type}-style-#{$type});
+
+          @include hu-responsive($class-name, $bp-scale, $hu-border-style-modules) {
+            @each $property in $properties {
+              #{$property}: $value;
+            }
+          }
+        }
+      }
+    }
+  }
+}

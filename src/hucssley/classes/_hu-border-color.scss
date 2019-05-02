@@ -1,0 +1,37 @@
+@each $module in hu-format-modules($hu-border-color-modules) {
+  @each $hue, $colors in $hu-border-color-types {
+    @each $color-scale, $color-value in $colors {
+      @each $side-type, $side-properties in $hu-border-color-sides {
+        $side-properties: if($side-properties, $side-properties, $side-type);
+        $class-name: hu-class-name(#{$side-type}-color-#{$hue}-#{$color-scale});
+
+        @include hu-generic($class-name, $module, $hu-border-color-modules) {
+          @each $property in $side-properties {
+            #{$property}-color: $color-value;
+          }
+        }
+      }
+    }
+  }
+}
+
+@if index($hu-border-color-modules, responsive) {
+  @each $bp-scale, $bp-value in $hu-breakpoints {
+    @media (min-width: $bp-value) {
+      @each $hue, $colors in $hu-border-color-types {
+        @each $color-scale, $color-value in $colors {
+          @each $side-type, $side-properties in $hu-border-color-sides {
+            $side-properties: if($side-properties, $side-properties, $side-type);
+            $class-name: hu-class-name(#{$side-type}-color-#{$hue}-#{$color-scale});
+
+            @include hu-responsive($class-name, $bp-scale, $hu-border-color-modules) {
+              @each $property in $side-properties {
+                #{$property}-color: $color-value;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

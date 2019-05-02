@@ -15,6 +15,12 @@ yarn run serve
 yarn run build
 ```
 
+### PurgeCSS
+
+1. Install Purgecss globally: `npm i -g purgecss`
+2. Create a build as above.
+3. `purgecss --config ./purgecss.config.js --out build/static/css/`
+
 ### Run your tests
 ```
 yarn run test

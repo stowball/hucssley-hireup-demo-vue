@@ -1,0 +1,27 @@
+@each $module in hu-format-modules($hu-text-align-modules) {
+  @each $type, $value in $hu-text-align-types {
+    $class-name: hu-class-name(text-align-#{$type});
+    $property: text-align;
+    $value: if($value, $value, $type);
+
+    @include hu-generic($class-name, $module, $hu-text-align-modules) {
+      #{$property}: $value;
+    }
+  }
+}
+
+@if index($hu-text-align-modules, responsive) {
+  @each $bp-scale, $bp-value in $hu-breakpoints {
+    @media (min-width: $bp-value) {
+      @each $type, $value in $hu-text-align-types {
+        $class-name: hu-class-name(text-align-#{$type});
+        $property: text-align;
+        $value: if($value, $value, $type);
+
+        @include hu-responsive($class-name, $bp-scale, $hu-text-align-modules) {
+          #{$property}: $value;
+        }
+      }
+    }
+  }
+}

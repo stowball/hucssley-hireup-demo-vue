@@ -1,0 +1,7 @@
+@mixin hu-responsive-state($class-name, $bp-scale) {
+  @each $state in $hu-states {
+    .#{$state}.bp-#{$bp-scale}-#{$state}--#{$class-name} {
+      @content;
+    }
+  }
+}

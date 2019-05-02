@@ -1,0 +1,33 @@
+@each $module in hu-format-modules($hu-border-width-modules) {
+  @each $type, $value in $hu-border-width-types {
+    @each $side-type, $side-properties in $hu-border-color-sides {
+      $side-properties: if($side-properties, $side-properties, $side-type);
+      $class-name: hu-class-name(#{$side-type}-width-#{$type});
+      $value: if($value, $value, $type);
+
+      @include hu-generic($class-name, $module, $hu-border-width-modules) {
+        @each $property in $side-properties {
+          #{$property}-width: $value;
+        }
+      }
+    }
+  }
+}
+
+@if index($hu-border-width-modules, responsive) {
+  @each $bp-scale, $bp-value in $hu-breakpoints {
+    @media (min-width: $bp-value) {
+      @each $scale, $value in $hu-border-width-scale {
+        @each $type, $properties in $hu-border-width-types {
+          $class-name: hu-class-name(#{$side-type}-width-#{$type});
+
+          @include hu-responsive($class-name, $bp-scale, $hu-border-width-modules) {
+            @each $property in $properties {
+              #{$property}: $value;
+            }
+          }
+        }
+      }
+    }
+  }
+}

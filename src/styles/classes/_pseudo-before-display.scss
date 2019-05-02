@@ -1,0 +1,5 @@
+@each $type in $hu-display-types {
+  @include hu-pseudo(hu-class-name(display-#{$type}), ("::before"), (responsive)) {
+    display: $type;
+  }
+}

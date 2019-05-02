@@ -1,0 +1,30 @@
+@mixin _icon-size-declarations($sizes) {
+  height: nth($sizes, 1);
+  width: if(length($sizes) > 1, nth($sizes, 2), nth($sizes, 1));
+}
+
+@each $module in hu-format-modules($icon-size-modules) {
+  @each $type, $value in $icon-size-types {
+    $class-name: hu-class-name(icon-size-#{$type});
+    $property: icon-size;
+
+    @include hu-generic($class-name, $module, $icon-size-modules) {
+      @include _icon-size-declarations($value);
+    }
+  }
+}
+
+@if index($icon-size-modules, responsive) {
+  @each $bp-scale, $bp-value in $hu-breakpoints {
+    @media (min-width: $bp-value) {
+      @each $type, $value in $icon-size-types {
+        $class-name: hu-class-name(icon-size-#{$type});
+        $value: if($value, $value, $type);
+
+        @include hu-responsive($class-name, $bp-scale, $icon-size-modules) {
+          @include _icon-size-declarations($value);
+        }
+      }
+    }
+  }
+}

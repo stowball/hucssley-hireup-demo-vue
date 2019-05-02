@@ -1,0 +1,29 @@
+@each $module in hu-format-modules($hu-color-modules) {
+  @each $hue, $colors in $hu-color-types {
+    @each $scale, $value in $colors {
+      $class-name: hu-class-name(color-#{$hue}-#{$scale});
+      $property: color;
+
+      @include hu-generic($class-name, $module, $hu-color-modules) {
+        #{$property}: $value;
+      }
+    }
+  }
+}
+
+@if index($hu-color-modules, responsive) {
+  @each $bp-scale, $bp-value in $hu-breakpoints {
+    @media (min-width: $bp-value) {
+      @each $hue, $colors in $hu-color-types {
+        @each $scale, $value in $colors {
+          $class-name: hu-class-name(color-#{$hue}-#{$scale});
+          $property: color;
+
+          @include hu-responsive($class-name, $bp-scale, $hu-color-modules) {
+            #{$property}: $value;
+          }
+        }
+      }
+    }
+  }
+}

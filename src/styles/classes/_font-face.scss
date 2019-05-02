@@ -1,0 +1,19 @@
+@font-face {
+  font-family: 'Fabriga';
+  src: url('./fonts/Fabriga-Regular.eot?#iefix');
+  src: url('./fonts/Fabriga-Regular.eot?#iefix') format('eot'),
+    url('./fonts/Fabriga-Regular.woff2') format('woff2'),
+    url('./fonts/Fabriga-Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Fabriga';
+  src: url('./fonts/Fabriga-Bold.eot?#iefix');
+  src: url('./fonts/Fabriga-Bold.eot?#iefix') format('eot'),
+    url('./fonts/Fabriga-Bold.woff2') format('woff2'),
+    url('./fonts/Fabriga-Bold.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+}

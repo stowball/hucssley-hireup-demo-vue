@@ -1,0 +1,30 @@
+// svg-fill-color -> fill
+@each $module in hu-format-modules($hu-svg-fill-color-modules) {
+  @each $hue, $colors in $hu-svg-fill-color-types {
+    @each $scale, $value in $colors {
+      $class-name: hu-class-name(svg-fill-color-#{$hue}-#{$scale});
+      $property: fill;
+
+      @include hu-generic($class-name, $module, $hu-svg-fill-color-modules) {
+        #{$property}: $value;
+      }
+    }
+  }
+}
+
+@if index($hu-svg-fill-color-modules, responsive) {
+  @each $bp-scale, $bp-value in $hu-breakpoints {
+    @media (min-width: $bp-value) {
+      @each $hue, $colors in $hu-svg-fill-color-types {
+        @each $scale, $value in $colors {
+          $class-name: hu-class-name(svg-fill-color-#{$hue}-#{$scale});
+          $property: fill;
+
+          @include hu-responsive($class-name, $bp-scale, $hu-svg-fill-color-modules) {
+            #{$property}: $value;
+          }
+        }
+      }
+    }
+  }
+}

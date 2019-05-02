@@ -1,0 +1,25 @@
+@each $module in hu-format-modules($shadow-modules) {
+  @each $type, $value in $shadow-types {
+    $class-name: hu-class-name(shadow-#{$type});
+    $property: box-shadow;
+
+    @include hu-generic($class-name, $module, $shadow-modules) {
+      #{$property}: $value;
+    }
+  }
+}
+
+@if index($shadow-modules, responsive) {
+  @each $bp-scale, $bp-value in $hu-breakpoints {
+    @media (min-width: $bp-value) {
+      @each $type, $value in $shadow-types {
+        $class-name: hu-class-name(shadow-#{$type});
+        $value: if($value, $value, $type);
+
+        @include hu-responsive($class-name, $bp-scale, $shadow-modules) {
+          #{$property}: $value;
+        }
+      }
+    }
+  }
+}

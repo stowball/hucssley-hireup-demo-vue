@@ -1,0 +1,10 @@
+@each $type, $value in $shadow-types {
+  @include hu-pseudo(hu-class-name(dropdown-shadow-#{$type}), ("::before"), (base, responsive)) {
+    box-shadow: $value;
+    content: "";
+    height: 100%;
+    position: absolute;
+    width: 100%;
+    z-index: -1;
+  }
+}

@@ -11,6 +11,47 @@
     <noscript>
       <strong>We're sorry but hu-header-hucssley doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
     </noscript>
+    <script>
+      (function () {
+        function loadSvgSprite (type, path, baseUrl) {
+          var id = type + '-svg';
+          var xhr = new XMLHttpRequest;
+          var body = document.body;
+          var div = document.createElement('div');
+          var base = baseUrl || window.location.protocol + '//' + window.location.hostname + (window.location.port ? ':' + window.location.port : '');
+          var url = base + path;
+          var noClassName = ' no-svg';
+
+          if (div.id = id, body.insertBefore(div, body.childNodes[0]), 'withCredentials' in xhr) {
+            xhr.withCredentials;
+            xhr.open('GET', url, true);
+          }
+          else {
+            if (typeof XDomainRequest == 'undefined') {
+              return void(body.className += noClassName);
+            }
+
+            xhr = new XDomainRequest;
+            xhr.open('GET', url);
+          }
+
+          xhr.onload = function() {
+            div.className = 'visually-hidden';
+            div.innerHTML = xhr.responseText;
+          };
+
+          xhr.onerror = function() {
+            body.className += noClassName;
+          };
+
+          setTimeout(function() {
+            xhr.send();
+          }, 0);
+        }
+
+        loadSvgSprite('icons', '/images/icons.svg');
+      })();
+    </script>
     <div id="app"></div>
     <!-- built files will be auto injected -->
   </body>

@@ -1,0 +1,30 @@
+// svg-stroke-color -> stroke
+@each $module in hu-format-modules($hu-svg-stroke-color-modules) {
+  @each $hue, $colors in $hu-svg-stroke-color-types {
+    @each $scale, $value in $colors {
+      $class-name: hu-class-name(svg-stroke-color-#{$hue}-#{$scale});
+      $property: stroke;
+
+      @include hu-generic($class-name, $module, $hu-svg-stroke-color-modules) {
+        #{$property}: $value;
+      }
+    }
+  }
+}
+
+@if index($hu-svg-stroke-color-modules, responsive) {
+  @each $bp-scale, $bp-value in $hu-breakpoints {
+    @media (min-width: $bp-value) {
+      @each $hue, $colors in $hu-svg-stroke-color-types {
+        @each $scale, $value in $colors {
+          $class-name: hu-class-name(svg-stroke-color-#{$hue}-#{$scale});
+          $property: stroke;
+
+          @include hu-responsive($class-name, $bp-scale, $hu-svg-stroke-color-modules) {
+            #{$property}: $value;
+          }
+        }
+      }
+    }
+  }
+}

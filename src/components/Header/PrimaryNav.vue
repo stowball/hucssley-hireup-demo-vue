@@ -1,0 +1,61 @@
+<script>
+export default {
+  styles: {
+    root: `
+      display-flex
+      flex-direction-column
+      height-100
+      padding-b-300
+      padding-h-400
+      bp-1040--flex-direction-row
+      bp-1040--padding-v-0
+    `,
+    item: 'display-flex',
+    link: `
+      align-items-center
+      color-blue-1000
+      display-flex
+      flex-grow-1
+      font-weight-700
+      line-height-100
+      padding-400
+      transition-duration-300
+      transition-easing-ease
+      transition-property-bg-color
+      hocus--bg-color-neutral-300
+      is-selected--bg-color-blue-300
+    `,
+    linkIsSelected: 'is-selected',
+  },
+  props: {
+    selectedIndex: Number,
+  },
+  created() {
+    this.navItems = [
+      'Dashboard',
+      'Search',
+      'Bookings',
+      'Job board',
+      'How to guide',
+    ];
+  },
+};
+</script>
+
+<template>
+  <ul v-bind:class="styles.root">
+    <li
+      v-for="(item, index) in navItems"
+      v-bind:class="styles.item"
+      v-bind:key="item"
+    >
+      <a
+        v-bind:aria-current="selectedIndex === index"
+        v-bind:class="[styles.link, selectedIndex === index && styles.linkIsSelected]"
+        v-bind:href="`#${item}`"
+      >
+        {{ item }}
+      </a>
+    </li>
+  </ul>
+</template>
