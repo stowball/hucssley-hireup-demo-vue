@@ -31,7 +31,6 @@ export default {
       width-100
       is-active--bg-color-blue-300
     `,
-    buttonUserIsActive: 'is-active',
     button__inner: `
       align-items-center
       display-flex
@@ -54,7 +53,6 @@ export default {
       bp-1040-pseudo-before--dropdown-shadow-600
       is-open--display-block
     `,
-    userNavIsOpen: 'is-open',
     userNav__item: `
       border-t-color-neutral-400
       border-t-style-solid
@@ -135,7 +133,7 @@ export default {
     </a>
     <button
       v-bind:aria-pressed={menuIsOpen}
-      v-bind:class="[styles.button, styles.buttonUser, menuIsOpen && styles.buttonUserIsActive]"
+      v-bind:class="[styles.button, styles.buttonUser, menuIsOpen && states.isActive]"
       v-on:click="toggleMenu"
     >
       <span v-bind:class="styles.button__inner">
@@ -152,7 +150,7 @@ export default {
       />
     </button>
 
-    <ul v-bind:class="[styles.userNav, menuIsOpen && styles.userNavIsOpen]">
+    <ul v-bind:class="[styles.userNav, menuIsOpen && states.isOpen]">
       <li
         v-bind:class="styles.userNav__item"
         v-for="item in userNavItems"

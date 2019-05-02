@@ -25,7 +25,6 @@ export default {
       hocus--bg-color-neutral-300
       is-selected--bg-color-blue-300
     `,
-    linkIsSelected: 'is-selected',
   },
   props: {
     selectedIndex: Number,
@@ -51,7 +50,7 @@ export default {
     >
       <a
         v-bind:aria-current="selectedIndex === index"
-        v-bind:class="[styles.link, selectedIndex === index && styles.linkIsSelected]"
+        v-bind:class="[styles.link, selectedIndex === index && states.isSelected]"
         v-bind:href="`#${item}`"
       >
         {{ item }}

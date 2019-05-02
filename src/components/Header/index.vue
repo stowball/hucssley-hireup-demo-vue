@@ -10,7 +10,6 @@ export default {
       bg-color-neutral-0
       shadow-500
     `,
-    rootIsOpen: 'is-open',
     container: `
       display-flex
       justify-content-space-between
@@ -76,7 +75,7 @@ export default {
 </script>
 
 <template>
-  <header v-bind:class="[styles.root, menuIsOpen && styles.rootIsOpen]">
+  <header v-bind:class="[styles.root, menuIsOpen && states.isOpen]">
     <div v-bind:class="styles.container">
       <a
         aria-label="Hireup"
