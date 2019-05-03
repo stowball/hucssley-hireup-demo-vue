@@ -8,6 +8,7 @@ export default {
       padding-b-300
       padding-h-400
       bp-1040--flex-direction-row
+      bp-1040--padding-l-0
       bp-1040--padding-v-0
     `,
     item: 'display-flex',
