@@ -1,89 +1,89 @@
 <script>
-import HuContainer from './components/HuContainer/index.vue';
-import HuHeader from './components/HuHeader/index.vue';
-import HuButton from './components/HuButton/index.vue';
+import ButtonHu from './components/ButtonHu/index.vue';
+import ContainerHu from './components/ContainerHu/index.vue';
+import HeaderHu from './components/HeaderHu/index.vue';
 
 export default {
   name: 'app',
   components: {
-    HuContainer,
-    HuHeader,
-    HuButton,
+    ButtonHu,
+    ContainerHu,
+    HeaderHu,
   },
 };
 </script>
 
 <template>
   <div>
-    <hu-header />
-    <hu-container as="main">
+    <header-hu />
+    <container-hu as="main">
       <div>
-        <hu-button class="margin-r-500 margin-t-500">
+        <button-hu class="margin-r-500 margin-t-500">
           Primary
-        </hu-button>
+        </button-hu>
 
-        <hu-button
+        <button-hu
           class="margin-r-500 margin-t-500"
           type="secondary"
         >
           Secondary
-        </hu-button>
+        </button-hu>
       </div>
 
       <div>
-        <hu-button
+        <button-hu
           class="margin-r-500 margin-t-500"
           shape="rounded"
         >
           Primary Rounded
-        </hu-button>
+        </button-hu>
 
-        <hu-button
+        <button-hu
           class="margin-r-500 margin-t-500"
           shape="rounded"
           type="secondary"
         >
           Secondary Rounded
-        </hu-button>
+        </button-hu>
       </div>
 
       <div>
-        <hu-button
+        <button-hu
           class="margin-r-500 margin-t-500"
           size="large"
           type="primary"
         >
           Primary Large
-        </hu-button>
+        </button-hu>
 
-        <hu-button
+        <button-hu
           class="margin-r-500 margin-t-500"
           size="large"
           type="secondary"
         >
           Secondary Large
-        </hu-button>
+        </button-hu>
       </div>
 
       <div>
-        <hu-button
+        <button-hu
           class="margin-r-500 margin-t-500"
           shape="rounded"
           size="large"
           type="primary"
         >
           Primary Large Rounded
-        </hu-button>
+        </button-hu>
 
-        <hu-button
+        <button-hu
           class="margin-r-500 margin-t-500"
           shape="rounded"
           size="large"
           type="secondary"
         >
           Secondary Large Rounded
-        </hu-button>
+        </button-hu>
       </div>
-    </hu-container>
+    </container-hu>
   </div>
 </template>

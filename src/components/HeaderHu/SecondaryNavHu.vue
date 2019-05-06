@@ -1,5 +1,5 @@
 <script>
-import HuSvg from '../HuSvg/index.vue';
+import SvgHu from '../SvgHu/index.vue';
 
 export default {
   styles: {
@@ -74,7 +74,7 @@ export default {
     `,
   },
   components: {
-    HuSvg,
+    SvgHu,
   },
   props: {
     user: {
@@ -125,7 +125,7 @@ export default {
       href="#messages"
       v-bind:class="[styles.button, styles.buttonMessages]"
     >
-      <hu-svg
+      <svg-hu
         name="envelope"
         v-bind:class="styles.icon"
       />
@@ -144,7 +144,7 @@ export default {
         />
         {{ user }}
       </span>
-      <hu-svg
+      <svg-hu
         name="caret-down"
         v-bind:class="styles.button__caret"
       />
@@ -160,7 +160,7 @@ export default {
           v-bind:class="styles.userNav__link"
           v-bind:href="item.label"
         >
-          <hu-svg
+          <svg-hu
             v-bind:class="styles.icon"
             v-bind:name="item.icon"
           />

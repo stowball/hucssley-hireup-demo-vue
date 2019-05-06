@@ -1,8 +1,8 @@
 <script>
-import HuContainer from '../HuContainer/index.vue';
-import HuPrimaryNav from './HuPrimaryNav.vue';
-import HuSecondaryNav from './HuSecondaryNav.vue';
-import HuSvg from '../HuSvg/index.vue';
+import ContainerHu from '../ContainerHu/index.vue';
+import PrimaryNavHu from './PrimaryNavHu.vue';
+import SecondaryNavHu from './SecondaryNavHu.vue';
+import SvgHu from '../SvgHu/index.vue';
 
 export default {
   styles: {
@@ -53,10 +53,10 @@ export default {
     `,
   },
   components: {
-    HuContainer,
-    HuPrimaryNav,
-    HuSecondaryNav,
-    HuSvg,
+    ContainerHu,
+    PrimaryNavHu,
+    SecondaryNavHu,
+    SvgHu,
   },
   data() {
     return ({
@@ -73,13 +73,13 @@ export default {
 
 <template>
   <header v-bind:class="[styles.root, menuIsOpen && states.isOpen]">
-    <hu-container v-bind:class="styles.container">
+    <container-hu v-bind:class="styles.container">
       <a
         aria-label="Hireup"
         href="/"
         v-bind:class="styles.logo"
       >
-        <hu-svg
+        <svg-hu
           name="hireup"
           v-bind:class="styles.logo__icon"
         />
@@ -91,16 +91,16 @@ export default {
         v-bind:class="styles.hamburger"
         v-on:click="toggleMenu"
       >
-        <hu-svg
+        <svg-hu
           name="hamburger"
           v-bind:class="styles.hamburger__icon"
         />
       </button>
 
       <nav v-bind:class="styles.nav">
-        <hu-primary-nav v-bind:selected-index="2" />
-        <hu-secondary-nav user="Jennifer W" />
+        <primary-nav-hu v-bind:selected-index="2" />
+        <secondary-nav-hu user="Jennifer W" />
       </nav>
-    </hu-container>
+    </container-hu>
   </header>
 </template>
