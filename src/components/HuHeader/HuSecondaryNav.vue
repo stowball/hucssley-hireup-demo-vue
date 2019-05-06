@@ -1,5 +1,5 @@
 <script>
-import SvgIcon from '../SvgIcon/index.vue';
+import HuSvg from '../HuSvg/index.vue';
 
 export default {
   styles: {
@@ -47,8 +47,8 @@ export default {
       bg-color-neutral-0
       display-none
       bp-1040--border-t-width-0
-      bp-1040--pin-r-0
-      bp-1040--pin-t-100
+      bp-1040--pos-r-0
+      bp-1040--pos-t-100
       bp-1040--position-absolute
       bp-1040-pseudo-before--dropdown-shadow-600
       is-open--display-block
@@ -74,7 +74,7 @@ export default {
     `,
   },
   components: {
-    SvgIcon,
+    HuSvg,
   },
   props: {
     user: {
@@ -125,7 +125,7 @@ export default {
       href="#messages"
       v-bind:class="[styles.button, styles.buttonMessages]"
     >
-      <svg-icon
+      <hu-svg
         name="envelope"
         v-bind:class="styles.icon"
       />
@@ -144,7 +144,7 @@ export default {
         />
         {{ user }}
       </span>
-      <svg-icon
+      <hu-svg
         name="caret-down"
         v-bind:class="styles.button__caret"
       />
@@ -160,7 +160,7 @@ export default {
           v-bind:class="styles.userNav__link"
           v-bind:href="item.label"
         >
-          <svg-icon
+          <hu-svg
             v-bind:class="styles.icon"
             v-bind:name="item.icon"
           />

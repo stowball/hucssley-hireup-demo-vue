@@ -1,9 +1,15 @@
 @import "hu-align-content";
 @import "hu-align-items";
 @import "hu-align-self";
+@import "hu-appearance";
 @import "hu-backface";
 @import "hu-bg-color";
+@import "hu-bg-position-x";
+@import "hu-bg-position-y";
+@import "hu-bg-repeat";
+@import "hu-bg-size";
 @import "hu-blend-mode";
+@import "hu-border";
 @import "hu-border-color";
 @import "hu-border-radius";
 @import "hu-border-style";
@@ -17,6 +23,7 @@
 @import "hu-flex-shrink";
 @import "hu-flex-wrap";
 @import "hu-font-family";
+@import "hu-font-smoothing";
 @import "hu-font-size";
 @import "hu-font-weight";
 @import "hu-height";
@@ -36,8 +43,8 @@
 @import "hu-overflow-y";
 @import "hu-overscroll";
 @import "hu-padding";
-@import "hu-pin";
 @import "hu-pointer-events";
+@import "hu-pos";
 @import "hu-position";
 @import "hu-scroll-behavior";
 @import "hu-svg-fill-color";

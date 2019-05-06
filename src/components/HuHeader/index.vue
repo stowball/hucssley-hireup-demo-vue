@@ -1,7 +1,8 @@
 <script>
-import PrimaryNav from './PrimaryNav.vue';
-import SecondaryNav from './SecondaryNav.vue';
-import SvgIcon from '../SvgIcon/index.vue';
+import HuContainer from '../HuContainer/index.vue';
+import HuPrimaryNav from './HuPrimaryNav.vue';
+import HuSecondaryNav from './HuSecondaryNav.vue';
+import HuSvg from '../HuSvg/index.vue';
 
 export default {
   styles: {
@@ -13,9 +14,6 @@ export default {
     container: `
       display-flex
       justify-content-space-between
-      margin-h-auto
-      max-width-container
-      padding-h-600
       position-relative
       bp-1040--justify-content-flex-start
     `,
@@ -28,8 +26,6 @@ export default {
     hamburger: `
       align-self-center
       border-radius-1000
-      box-sizing-content-box
-      icon-size-200
       padding-300
       bp-1040--display-none
       group__is-open--bg-color-neutral-300
@@ -42,9 +38,9 @@ export default {
     nav: `
       bg-color-neutral-0
       display-none
-      pin-l-0
-      pin-r-0
-      pin-t-100
+      pos-l-0
+      pos-r-0
+      pos-t-100
       position-absolute
       bp-1040--display-flex
       bp-1040--justify-content-space-between
@@ -57,9 +53,10 @@ export default {
     `,
   },
   components: {
-    PrimaryNav,
-    SecondaryNav,
-    SvgIcon,
+    HuContainer,
+    HuPrimaryNav,
+    HuSecondaryNav,
+    HuSvg,
   },
   data() {
     return ({
@@ -76,13 +73,13 @@ export default {
 
 <template>
   <header v-bind:class="[styles.root, menuIsOpen && states.isOpen]">
-    <div v-bind:class="styles.container">
+    <hu-container v-bind:class="styles.container">
       <a
         aria-label="Hireup"
         href="/"
         v-bind:class="styles.logo"
       >
-        <svg-icon
+        <hu-svg
           name="hireup"
           v-bind:class="styles.logo__icon"
         />
@@ -94,16 +91,16 @@ export default {
         v-bind:class="styles.hamburger"
         v-on:click="toggleMenu"
       >
-        <svg-icon
+        <hu-svg
           name="hamburger"
           v-bind:class="styles.hamburger__icon"
         />
       </button>
 
       <nav v-bind:class="styles.nav">
-        <primary-nav v-bind:selected-index="2" />
-        <secondary-nav user="Jennifer W" />
+        <hu-primary-nav v-bind:selected-index="2" />
+        <hu-secondary-nav user="Jennifer W" />
       </nav>
-    </div>
+    </hu-container>
   </header>
 </template>
