@@ -4,13 +4,13 @@
     $property: white-space;
     $value: if($value, $value, $type);
 
-    @include hu-generic($class-name, $module, $hu-white-space-modules) {
+    @include hu-generic($class-name, $module) {
       #{$property}: $value;
     }
   }
 }
 
-@if index($hu-white-space-modules, responsive) {
+@if (index($hu-white-space-modules, responsive)) {
   @each $bp-scale, $bp-value in $hu-breakpoints {
     @media (min-width: $bp-value) {
       @each $type, $value in $hu-white-space-types {

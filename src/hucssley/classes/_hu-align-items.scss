@@ -4,13 +4,13 @@
     $property: align-items;
     $value: if($value, $value, $type);
 
-    @include hu-generic($class-name, $module, $hu-align-items-modules) {
+    @include hu-generic($class-name, $module) {
       #{$property}: $value;
     }
   }
 }
 
-@if index($hu-align-items-modules, responsive) {
+@if (index($hu-align-items-modules, responsive)) {
   @each $bp-scale, $bp-value in $hu-breakpoints {
     @media (min-width: $bp-value) {
       @each $type, $value in $hu-align-items-types {

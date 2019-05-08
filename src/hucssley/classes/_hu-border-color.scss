@@ -5,7 +5,7 @@
         $side-properties: if($side-properties, $side-properties, $side-type);
         $class-name: hu-class-name(#{$side-type}-color-#{$hue}-#{$color-scale});
 
-        @include hu-generic($class-name, $module, $hu-border-color-modules) {
+        @include hu-generic($class-name, $module) {
           @each $property in $side-properties {
             #{$property}-color: $color-value;
           }
@@ -15,7 +15,7 @@
   }
 }
 
-@if index($hu-border-color-modules, responsive) {
+@if (index($hu-border-color-modules, responsive)) {
   @each $bp-scale, $bp-value in $hu-breakpoints {
     @media (min-width: $bp-value) {
       @each $hue, $colors in $hu-border-color-types {

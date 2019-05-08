@@ -4,13 +4,13 @@
     $property: overflow-x;
     $value: if($value, $value, $type);
 
-    @include hu-generic($class-name, $module, $hu-overflow-x-modules) {
+    @include hu-generic($class-name, $module) {
       #{$property}: $value;
     }
   }
 }
 
-@if index($hu-overflow-x-modules, responsive) {
+@if (index($hu-overflow-x-modules, responsive)) {
   @each $bp-scale, $bp-value in $hu-breakpoints {
     @media (min-width: $bp-value) {
       @each $type, $value in $hu-overflow-x-types {

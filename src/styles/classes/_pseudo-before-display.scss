@@ -1,5 +1,9 @@
-@each $type in $hu-display-types {
-  @include hu-pseudo(hu-class-name(display-#{$type}), ("::before"), (responsive)) {
-    display: $type;
+@each $bp-scale, $bp-value in $hu-breakpoints {
+  @media (min-width: $bp-value) {
+    @each $type in $hu-display-types {
+      @include hu-pseudo-responsive(hu-class-name(display-#{$type}), ("::before"), $shadow-modules, $bp-scale) {
+        display: $type;
+      }
+    }
   }
 }

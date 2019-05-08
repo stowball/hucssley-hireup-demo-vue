@@ -4,12 +4,12 @@
   $property: -webkit-overflow-scrolling;
   $value: touch;
 
-  @include hu-generic($class-name, $module, $hu-momentum-scrolling-modules) {
+  @include hu-generic($class-name, $module) {
     #{$property}: $value;
   }
 }
 
-@if index($hu-momentum-scrolling-modules, responsive) {
+@if (index($hu-momentum-scrolling-modules, responsive)) {
   @each $bp-scale, $bp-value in $hu-breakpoints {
     @media (min-width: $bp-value) {
       @each $type, $value in $hu-momentum-scrolling-types {

@@ -8,7 +8,7 @@
     $class-name: hu-class-name(icon-size-#{$type});
     $property: icon-size;
 
-    @include hu-generic($class-name, $module, $icon-size-modules) {
+    @include hu-generic($class-name, $module) {
       @include _icon-size-declarations($value);
     }
   }

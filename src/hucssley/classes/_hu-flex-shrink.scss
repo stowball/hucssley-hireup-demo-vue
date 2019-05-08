@@ -4,13 +4,13 @@
     $property: flex-shrink;
     $value: if($value, $value, $type);
 
-    @include hu-generic($class-name, $module, $hu-flex-shrink-modules) {
+    @include hu-generic($class-name, $module) {
       #{$property}: $value;
     }
   }
 }
 
-@if index($hu-flex-shrink-modules, responsive) {
+@if (index($hu-flex-shrink-modules, responsive)) {
   @each $bp-scale, $bp-value in $hu-breakpoints {
     @media (min-width: $bp-value) {
       @each $type, $value in $hu-flex-shrink-types {

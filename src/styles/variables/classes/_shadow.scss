@@ -1,4 +1,4 @@
-$shadow-modules: (base) !default;
+$shadow-modules: (base, responsive) !default;
 
 $shadow-types: (
   500: 0 hu-rem(2) hu-rem(10) rgba(hu-get($hu-colors, neutral 1000), 0.1),

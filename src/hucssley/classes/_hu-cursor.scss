@@ -4,13 +4,13 @@
     $property: cursor;
     $value: if($value, $value, $type);
 
-    @include hu-generic($class-name, $module, $hu-cursor-modules) {
+    @include hu-generic($class-name, $module) {
       #{$property}: $value;
     }
   }
 }
 
-@if index($hu-cursor-modules, responsive) {
+@if (index($hu-cursor-modules, responsive)) {
   @each $bp-scale, $bp-value in $hu-breakpoints {
     @media (min-width: $bp-value) {
       @each $type, $value in $hu-cursor-types {

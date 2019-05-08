@@ -4,13 +4,13 @@
     $property: height;
     $value: if($value, $value, $type);
 
-    @include hu-generic($class-name, $module, $hu-height-modules) {
+    @include hu-generic($class-name, $module) {
       #{$property}: $value;
     }
   }
 }
 
-@if index($hu-height-modules, responsive) {
+@if (index($hu-height-modules, responsive)) {
   @each $bp-scale, $bp-value in $hu-breakpoints {
     @media (min-width: $bp-value) {
       @each $type, $value in $hu-height-types {

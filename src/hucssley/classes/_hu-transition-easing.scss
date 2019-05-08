@@ -5,13 +5,13 @@
     $property: transition-timing-function;
     $value: if($value, $value, $type);
 
-    @include hu-generic($class-name, $module, $hu-transition-easing-modules) {
+    @include hu-generic($class-name, $module) {
       #{$property}: $value;
     }
   }
 }
 
-@if index($hu-transition-easing-modules, responsive) {
+@if (index($hu-transition-easing-modules, responsive)) {
   @each $bp-scale, $bp-value in $hu-breakpoints {
     @media (min-width: $bp-value) {
       @each $type, $value in $hu-transition-easing-types {

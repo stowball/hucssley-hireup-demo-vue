@@ -5,13 +5,13 @@
     $property: text-transform;
     $value: if($value, $value, $type);
 
-    @include hu-generic($class-name, $module, $hu-text-case-modules) {
+    @include hu-generic($class-name, $module) {
       #{$property}: $value;
     }
   }
 }
 
-@if index($hu-text-case-modules, responsive) {
+@if (index($hu-text-case-modules, responsive)) {
   @each $bp-scale, $bp-value in $hu-breakpoints {
     @media (min-width: $bp-value) {
       @each $type, $value in $hu-text-case-types {

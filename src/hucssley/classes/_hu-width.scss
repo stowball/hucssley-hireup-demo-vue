@@ -4,13 +4,13 @@
     $property: width;
     $value: if($value, $value, $type);
 
-    @include hu-generic($class-name, $module, $hu-width-modules) {
+    @include hu-generic($class-name, $module) {
       #{$property}: $value;
     }
   }
 }
 
-@if index($hu-width-modules, responsive) {
+@if (index($hu-width-modules, responsive)) {
   @each $bp-scale, $bp-value in $hu-breakpoints {
     @media (min-width: $bp-value) {
       @each $type, $value in $hu-width-types {

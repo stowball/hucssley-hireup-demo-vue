@@ -5,14 +5,14 @@
       $class-name: hu-class-name(bg-color-#{$hue}-#{$scale});
       $property: background-color;
 
-      @include hu-generic($class-name, $module, $hu-bg-color-modules) {
+      @include hu-generic($class-name, $module) {
         #{$property}: $value;
       }
     }
   }
 }
 
-@if index($hu-bg-color-modules, responsive) {
+@if (index($hu-bg-color-modules, responsive)) {
   @each $bp-scale, $bp-value in $hu-breakpoints {
     @media (min-width: $bp-value) {
       @each $hue, $colors in $hu-bg-color-types {

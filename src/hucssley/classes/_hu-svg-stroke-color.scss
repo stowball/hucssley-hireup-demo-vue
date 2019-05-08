@@ -5,14 +5,14 @@
       $class-name: hu-class-name(svg-stroke-color-#{$hue}-#{$scale});
       $property: stroke;
 
-      @include hu-generic($class-name, $module, $hu-svg-stroke-color-modules) {
+      @include hu-generic($class-name, $module) {
         #{$property}: $value;
       }
     }
   }
 }
 
-@if index($hu-svg-stroke-color-modules, responsive) {
+@if (index($hu-svg-stroke-color-modules, responsive)) {
   @each $bp-scale, $bp-value in $hu-breakpoints {
     @media (min-width: $bp-value) {
       @each $hue, $colors in $hu-svg-stroke-color-types {
