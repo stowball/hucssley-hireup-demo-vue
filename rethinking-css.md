@@ -94,7 +94,7 @@ If we combine that with removing the need to juggle specificity, reducing the re
 
 ## Introducing Hucssley
 
-A CSS framework which provides atomic utility classes for rapidly building, consistent, performant custom user interfaces.
+A CSS framework which provides atomic utility classes for rapidly building consistent and performant user interfaces.
 
 It has:
 
