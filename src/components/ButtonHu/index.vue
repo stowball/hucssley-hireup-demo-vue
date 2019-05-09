@@ -41,6 +41,7 @@ export default {
     `,
   },
   props: {
+    href: String,
     shape: {
       default: 'square',
       type: String,
@@ -58,16 +59,18 @@ export default {
 </script>
 
 <template>
-  <button
+  <component
     v-bind:class="[
       styles.button.base,
       styles.button.shape[shape],
       styles.button.size[size],
       styles.button.type[type],
     ]"
+    v-bind:href="href"
+    v-bind:is="href ? 'a' : 'button'"
   >
     <span v-bind:class="styles.span">
       <slot></slot>
     </span>
-  </button>
+  </component>
 </template>

@@ -1,5 +1,6 @@
 <script>
 import ButtonHu from './components/ButtonHu/index.vue';
+import CalloutHu from './components/CalloutHu/index.vue';
 import ContainerHu from './components/ContainerHu/index.vue';
 import HeaderHu from './components/HeaderHu/index.vue';
 
@@ -7,6 +8,7 @@ export default {
   name: 'app',
   components: {
     ButtonHu,
+    CalloutHu,
     ContainerHu,
     HeaderHu,
   },
@@ -65,7 +67,7 @@ export default {
         </button-hu>
       </div>
 
-      <div>
+      <div class="margin-b-500">
         <button-hu
           class="margin-r-500 margin-t-500"
           shape="rounded"
@@ -84,6 +86,13 @@ export default {
           Secondary Large Rounded
         </button-hu>
       </div>
+
+      <callout-hu
+        image="https://hireup.cdn.prismic.io/hireup/89e15301c28e6396927d85e38e9c5d5833ebab09_kyle_357-bonnie.png"
+        linkHref="/"
+        linkLabel="Find your connection"
+        title="Disability support workers who love what you love"
+      />
     </container-hu>
   </div>
 </template>
