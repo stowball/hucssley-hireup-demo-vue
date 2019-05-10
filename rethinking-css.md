@@ -1,5 +1,7 @@
 # Rethinking CSS
 
+In this article, I hope to define what I feel are the biggest issues with CSS, and ultimately, how those issues can be overcome.
+
 ## CSS is hard
 
 While the syntax of, and writing CSS is very easy to learn and understand, product development teams the world over equally struggle with how to define and implement a maintainable, scalable CSS architecture.
@@ -92,16 +94,18 @@ What if we could provide a styling solution whose API mostly matches plain CSS 1
 
 If we combine that with removing the need to juggle specificity, reducing the requirement to name things, having a consistent approach to styling every possible context and forcing a mobile-first mentality, a developer's cognitive overhead and barrier to entry would be massively reduced.
 
-## Introducing Hucssley
+## Introducing Hucssley – Hireup's CSS Library
 
-A CSS framework which provides atomic utility classes for rapidly building consistent and performant user interfaces.
+Hucssley is a CSS framework which provides atomic utility classes for rapidly building consistent and performant user interfaces. Using it should hopefully address all of the pain points and support the goals previously discussed.
 
-It has:
+It is very different to traditional frameworks like Bootstrap or Semantic UI, as it contains zero pre-built UI components, instead providing you with the atomic building blocks necessary for **you** to create any UI component.
 
-* A sensible, optional reset
-* Single responsibility classes for all major properties, which are:
-  * Available for all breakpoints
-  * Available for all UI states
-  * Available for all user interactions
-* The ability to configure and customise existing classes, and to create new ones
-* No opinion about how your app should look
+Hucssley has a few goals:
+
+1. To be incredibly easy to learn and use, by providing a system of atomic classes that mostly map 1:1 with existing CSS properties.
+2. To allow anyone of any skill to rapidly build for the web without unknowingly causing CSS bloat or fighting against some of CSS's core, but sometimes difficult to understand principals.
+3. To provide the tools required to build UI for any breakpoint, user interaction or UI state.
+4. To be completely platform agnostic and portable between front-end stacks, with Sass being the only dependency.
+5. To be highly flexible to your needs, with the ability to easily customize existing classes and create new ones.
+
+For more information, please [read the docs](/hucssley-docs.md).
