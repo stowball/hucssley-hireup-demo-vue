@@ -7,6 +7,7 @@ export default {
         transition-duration-100
         transition-easing-ease
         transition-property-all
+        hocus--scale-105
       `,
       type: {
         primary: `

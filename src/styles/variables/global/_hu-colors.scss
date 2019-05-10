@@ -1,0 +1,33 @@
+$hu-colors: hu-append((
+  neutral: (
+    0: #fff,
+    100: #fafbfd,
+    200: #f9fafc,
+    300: #f1f4f8,
+    400: #f1f1f1,
+    500: #e0e1e2,
+    600: #aeaeae,
+    700: #888,
+    800: #626262,
+    900: #495b60,
+    1000: #140a01,
+  ),
+  blue: (
+    100: #f3f9ff,
+    300: #cff5fa,
+    400: #afeff7,
+    600: #00c2da,
+    1000: #003453,
+  ),
+  yellow: (
+    200: #fdf8c2,
+    300: #fbf5ac,
+  ),
+  green: (
+    1000: #17653b,
+  ),
+  red: (
+    100: #fffdfc,
+    1000: #b40b00,
+  ),
+), $hu-colors-keywords);

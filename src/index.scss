@@ -1,4 +1,13 @@
 @import "hucssley/helpers";
-@import "styles/variables/index";
+
+@import "hucssley/variables/global/index";
+@import "styles/variables/global/index";
+
+@import "hucssley/variables/classes/index";
+@import "styles/variables/classes/index";
+
+@import "hucssley/variables/reset/index";
+@import "styles/variables/reset/index";
+
 @import "hucssley/styles";
 @import "styles/classes/index";

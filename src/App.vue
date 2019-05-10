@@ -18,7 +18,18 @@ export default {
 <template>
   <div>
     <header-hu />
-    <container-hu as="main">
+
+    <container-hu
+      as="main"
+      class="margin-t-500"
+    >
+      <callout-hu
+        image="https://hireup.cdn.prismic.io/hireup/89e15301c28e6396927d85e38e9c5d5833ebab09_kyle_357-bonnie.png"
+        linkHref="/"
+        linkLabel="Find your connection"
+        title="Disability support workers who love what you love"
+      />
+
       <div>
         <button-hu class="margin-r-500 margin-t-500">
           Primary
@@ -86,13 +97,6 @@ export default {
           Secondary Large Rounded
         </button-hu>
       </div>
-
-      <callout-hu
-        image="https://hireup.cdn.prismic.io/hireup/89e15301c28e6396927d85e38e9c5d5833ebab09_kyle_357-bonnie.png"
-        linkHref="/"
-        linkLabel="Find your connection"
-        title="Disability support workers who love what you love"
-      />
     </container-hu>
   </div>
 </template>
