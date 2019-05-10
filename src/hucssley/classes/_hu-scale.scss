@@ -1,3 +1,4 @@
+// scale-x -> transform: scale
 @each $module in hu-format-modules($hu-scale-modules) {
   @each $type, $value in $hu-scale-types {
     $class-name: hu-class-name(scale-#{$type});
@@ -5,14 +6,14 @@
     $value: if($value, $value, $type);
 
     @include hu-generic($class-name, $module) {
-      #{$property}: $value;
+      #{$property}: scale($value);
     }
   }
 }
 
 @if (index($hu-scale-modules, responsive)) {
   @each $bp-scale, $bp-value in $hu-breakpoints {
-    @media (min-width: $bp-value) {
+    @include hu-media-query($bp-value) {
       @each $type, $value in $hu-scale-types {
         $class-name: hu-class-name(scale-#{$type});
         $property: scale;

@@ -1,3 +1,4 @@
+// rotate -> transform: rotate
 @each $module in hu-format-modules($hu-rotate-modules) {
   @each $type, $value in $hu-rotate-types {
     $class-name: hu-class-name(rotate-#{$type});
@@ -5,14 +6,14 @@
     $value: if($value, $value, $type);
 
     @include hu-generic($class-name, $module) {
-      #{$property}: $value;
+      #{$property}: rotate($value);
     }
   }
 }
 
 @if (index($hu-rotate-modules, responsive)) {
   @each $bp-scale, $bp-value in $hu-breakpoints {
-    @media (min-width: $bp-value) {
+    @include hu-media-query($bp-value) {
       @each $type, $value in $hu-rotate-types {
         $class-name: hu-class-name(rotate-#{$type});
         $property: rotate;
