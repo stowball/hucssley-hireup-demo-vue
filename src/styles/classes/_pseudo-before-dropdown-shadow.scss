@@ -7,8 +7,8 @@
   z-index: -1;
 }
 
-@each $module in hu-format-modules($shadow-modules) {
-  @each $type, $value in $shadow-types {
+@each $module in hu-format-modules($hu-shadow-modules) {
+  @each $type, $value in $hu-shadow-types {
     @include hu-pseudo(hu-class-name(dropdown-shadow-#{$type}), ("::before"), $module) {
       @include _hu-pseudo-before-dropdown-shadow-declarations($value);
     }
@@ -17,8 +17,8 @@
 
 @each $bp-scale, $bp-value in $hu-breakpoints {
   @media (min-width: $bp-value) {
-    @each $type, $value in $shadow-types {
-      @include hu-pseudo-responsive(hu-class-name(dropdown-shadow-#{$type}), ("::before"), $shadow-modules, $bp-scale) {
+    @each $type, $value in $hu-shadow-types {
+      @include hu-pseudo-responsive(hu-class-name(dropdown-shadow-#{$type}), ("::before"), $hu-shadow-modules, $bp-scale) {
         @include _hu-pseudo-before-dropdown-shadow-declarations($value);
       }
     }
