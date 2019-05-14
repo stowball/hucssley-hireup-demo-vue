@@ -1,3 +1,0 @@
-@function hu-shade($color, $percentage) {
-  @return mix(#000, $color, $percentage);
-}

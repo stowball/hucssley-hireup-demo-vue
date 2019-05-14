@@ -1,5 +1,0 @@
-@mixin hu-theme($class-name, $theme, $modules) {
-  @include hu-parent($class-name, theme-#{$theme}, $modules, "-" + $theme) {
-    @content;
-  }
-}

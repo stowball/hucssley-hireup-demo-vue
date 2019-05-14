@@ -1,5 +1,0 @@
-@mixin hu-responsive-base($class-name, $bp-scale) {
-  .bp-#{$bp-scale}--#{$class-name} {
-    @content;
-  }
-}

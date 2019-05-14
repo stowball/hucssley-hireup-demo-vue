@@ -1,8 +1,0 @@
-@function hu-class-name($class-name) {
-  $replacement: hu-remove-string-duplicates($class-name);
-
-  $class-name: hu-string-replace($class-name, #{$replacement}-#{$replacement}, $replacement);
-  $class-name: hu-escape-class-name($class-name);
-
-  @return #{$hu-namespace}#{$class-name};
-}
