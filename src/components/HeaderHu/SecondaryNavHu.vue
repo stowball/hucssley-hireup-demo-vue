@@ -44,7 +44,6 @@ export default {
       margin-l-200
     `,
     icon: `
-      bg-color-neutral-500
       border-radius-1000
       icon-size-100
       margin-r-300
@@ -89,9 +88,9 @@ export default {
     },
   },
   data() {
-    return ({
+    return {
       menuIsOpen: false,
-    });
+    };
   },
   methods: {
     toggleMenu() {

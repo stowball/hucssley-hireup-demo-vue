@@ -92,13 +92,15 @@ Run-time performance should also improve, as the [class selector is the fastest]
 
 What if we could provide a styling solution whose API mostly matches plain CSS 1:1, and then further fixes and improves on some of CSS's known inconsistencies? If you know CSS properties, then you would know this.
 
-If we combine that with removing the need to juggle specificity, reducing the requirement to name things, having a consistent approach to styling every possible context and forcing a mobile-first mentality, a developer's cognitive overhead and barrier to entry would be massively reduced.
+If we combine that with removing the need to juggle specificity, reducing the requirement to name things, having a consistent approach to styling every possible context and encouraging a mobile-first mentality, a developer's cognitive overhead and barrier to entry would be massively reduced.
 
 ## Introducing Hucssley – Hireup's CSS Library
 
 Hucssley is a CSS framework which provides atomic utility classes for rapidly building consistent and performant user interfaces. Using it should hopefully address all of the pain points and support the goals previously discussed.
 
 It is very different to traditional frameworks like Bootstrap or Semantic UI, as it contains zero pre-built UI components, instead providing you with the atomic building blocks necessary for **you** to create any UI component.
+
+This means we will need to re-write all of our UI components from scratch, but it will finally allow us to realise of our UX/UI team's dreams for the product without being saddled with all the associated baggage and concessions of 3rd party developers' implementations.
 
 Hucssley has a few goals:
 

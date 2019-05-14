@@ -16,7 +16,7 @@
 }
 
 @each $bp-scale, $bp-value in $hu-breakpoints {
-  @media (min-width: $bp-value) {
+  @include hu-media-query($bp-value) {
     @each $type, $value in $hu-shadow-types {
       @include hu-pseudo-responsive(hu-class-name(dropdown-shadow-#{$type}), ("::before"), $hu-shadow-modules, $bp-scale) {
         @include _hu-pseudo-before-dropdown-shadow-declarations($value);

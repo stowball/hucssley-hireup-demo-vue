@@ -1,6 +1,6 @@
 # Hucssley classes
 
-Hucssley provides ~80 classes out-of-the-box, which have been sensibly pre-configured for everyday use. Some are placeholders for more complex things, like `shadow` and `transform` that don't map 1:1 to a property and value.
+Hucssley provides ~100 classes out-of-the-box, which have been sensibly pre-configured to get up and running, fast. Some are placeholders for more complex things, like `shadow` and `transform` that don't map 1:1 to a property/value pair and are more likely to be customized to suit your project.
 
 ## Understanding class configuration
 
@@ -75,8 +75,6 @@ Will generate:
 ```
 
 If a key/value pair is identical, the key will be automatically be omitted from the class name suffix, which is why `.flex-wrap` is created, instead of `flex-wrap-wrap`.
-
-All classes can be customized to suit your project. The classes and their default configurations are:
 
 ### Complex types
 
@@ -185,7 +183,7 @@ set class overrides before if you don't need access to the defaults & want chang
 
 Below is a complete list of all the classes in Hucssley by default and their individual configurations. You'll see that some classes reference the same variables, to make customizing them to your specific project easier.
 
-*Classes map 1:1 to with CSS properties unless otherwise specified.*
+*Note: Classes map 1:1 to with CSS properties unless otherwise specified.*
 
 ### hu-align-content
 
@@ -241,7 +239,7 @@ $hu-appearance-modules: (base);
 $hu-appearance-types: (
   none,
   textfield,
-  );
+);
 ```
 
 ### hu-backface
@@ -607,6 +605,162 @@ $hu-font-weight-types: (
 );
 ```
 
+### hu-font-style
+
+```scss
+$hu-font-style-modules: (base);
+
+$hu-font-style-types: (
+  italic,
+  normal,
+  oblique,
+);
+```
+
+### hu-grid
+
+```scss
+$hu-grid-modules: ();
+
+$hu-grid-types: ();
+```
+
+### hu-grid-area
+
+```scss
+$hu-grid-area-modules: ();
+
+$hu-grid-area-types: ();
+```
+
+### hu-grid-auto-columns
+
+```scss
+$hu-grid-auto-columns-modules: ();
+
+$hu-grid-auto-columns-types: ();
+```
+
+### hu-grid-auto-flow
+
+```scss
+$hu-grid-auto-flow-modules: ();
+
+$hu-grid-auto-flow-types: ();
+```
+
+### hu-grid-auto-rows
+
+```scss
+$hu-grid-auto-rows-modules: ();
+
+$hu-grid-auto-rows-types: ();
+```
+
+### hu-grid-column
+
+```scss
+$hu-grid-column-modules: ();
+
+$hu-grid-column-types: ();
+```
+
+### hu-grid-column-end
+
+```scss
+$hu-grid-column-end-modules: ();
+
+$hu-grid-column-end-types: ();
+```
+
+### hu-grid-column-gap
+
+```scss
+$hu-grid-column-gap-modules: ();
+
+$hu-grid-column-gap-types: ();
+```
+
+### hu-grid-column-start
+
+```scss
+$hu-grid-column-start-modules: ();
+
+$hu-grid-column-start-types: ();
+```
+
+### hu-grid-gap
+
+```scss
+$hu-grid-gap-modules: ();
+
+$hu-grid-gap-types: ();
+```
+
+### hu-grid-row
+
+```scss
+$hu-grid-row-modules: ();
+
+$hu-grid-row-types: ();
+```
+
+### hu-grid-row-end
+
+```scss
+$hu-grid-row-end-modules: ();
+
+$hu-grid-row-end-types: ();
+```
+
+### hu-grid-row-gap
+
+```scss
+$hu-grid-row-gap-modules: ();
+
+$hu-grid-row-gap-types: ();
+```
+
+### hu-grid-row-start
+
+```scss
+$hu-grid-row-start-modules: ();
+
+$hu-grid-row-start-types: ();
+```
+
+### hu-grid-template
+
+```scss
+$hu-grid-template-modules: ();
+
+$hu-grid-template-types: ();
+```
+
+### hu-grid-template-areas
+
+```scss
+$hu-grid-template-areas-modules: ();
+
+$hu-grid-template-areas-types: ();
+```
+
+### hu-grid-template-columns
+
+```scss
+$hu-grid-template-columns-modules: ();
+
+$hu-grid-template-columns-types: ();
+```
+
+### hu-grid-template-rows
+
+```scss
+$hu-grid-template-rows-modules: ();
+
+$hu-grid-template-rows-types: ();
+```
+
 ### hu-height
 
 ```scss
@@ -750,6 +904,19 @@ $hu-max-width-modules: (base);
 
 $hu-max-width-types: (
   100: 100%,
+);
+```
+
+### hu-min-height
+
+```scss
+$hu-min-height-modules: (base);
+
+$hu-min-height-types: (
+  0: 0,
+  100: 100%,
+  100vh: 100vh,
+  none: none,
 );
 ```
 
@@ -931,42 +1098,50 @@ $hu-position-types: (
 
 ### hu-rotate
 
+```
+rotate -> transform: rotate
+```
+
 ```scss
 $hu-rotate-modules: ();
 
 $hu-rotate-types: (
-  n360: rotate(-360deg),
-  n270: rotate(-270deg),
-  n180: rotate(-180deg),
-  n90: rotate(-90deg),
-  n45: rotate(-45deg),
-  0: rotate(0),
-  45: rotate(45deg),
-  90: rotate(90deg),
-  180: rotate(180deg),
-  270: rotate(270deg),
-  360: rotate(360deg),
+  n360: -360deg,
+  n270: -270deg,
+  n180: -180deg,
+  n90: -90deg,
+  n45: -45deg,
+  0: 0,
+  45: 45deg,
+  90: 90deg,
+  180: 180deg,
+  270: 270deg,
+  360: 360deg,
 );
 ```
 
 ### hu-scale
 
+```
+scale -> transform: scale
+```
+
 ```scss
 $hu-scale-modules: (hocus);
 
 $hu-scale-types: (
-  0: scale(0),
-  50: scale(0.5),
-  80: scale(0.8),
-  85: scale(0.85),
-  90: scale(0.9),
-  95: scale(0.95),
-  100: scale(1),
-  105: scale(1.05),
-  110: scale(1.1),
-  115: scale(1.15),
-  120: scale(1.2),
-  150: scale(1.5),
+  0: 0,
+  50: 0.5,
+  80: 0.8,
+  85: 0.85,
+  90: 0.9,
+  95: 0.95,
+  100: 1,
+  105: 1.05,
+  110: 1.1,
+  115: 1.15,
+  120: 1.2,
+  150: 1.5,
 );
 ```
 
@@ -1141,6 +1316,14 @@ $hu-transform-modules: ();
 $hu-transform-types: ();
 ```
 
+### hu-transition
+
+```scss
+$hu-transition-modules: ();
+
+$hu-transition-types: ();
+```
+
 ### hu-transition-delay
 
 ```scss
@@ -1237,30 +1420,31 @@ $hu-transition-property-types: (
 
 ### hu-translate-x
 
+```
+translate-x -> transform: translateX
+```
+
 ```scss
 $hu-translate-x-modules: (base);
 
 $hu-translate-x-types: (
-  n100: translateX(-100%),
-  n50: translateX(-50%),
-  0: translateX(0),
-  50: translateX(50%),
-  100: translateX(100%),
+  n100: -100%,
+  n50: -50%,
+  0: 0,
+  50: 50%,
+  100: 100%,
 );
 ```
 
 ### hu-translate-y
 
+```
+translate-y -> transform: translateY
+```
 ```scss
 $hu-translate-y-modules: $hu-translate-x-modules;
 
-$hu-translate-y-types: (
-  n100: translateY(-100%),
-  n50: translateY(-50%),
-  0: translateY(0),
-  50: translateY(50%),
-  100: translateY(100%),
-);
+$hu-translate-y-types: $hu-translate-x-types;
 ```
 
 ### hu-truncate-text

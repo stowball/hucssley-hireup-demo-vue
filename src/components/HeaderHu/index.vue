@@ -61,9 +61,9 @@ export default {
     SvgHu,
   },
   data() {
-    return ({
+    return {
       menuIsOpen: false,
-    });
+    };
   },
   methods: {
     toggleMenu() {

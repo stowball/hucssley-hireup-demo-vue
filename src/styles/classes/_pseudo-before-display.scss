@@ -1,8 +1,22 @@
+@each $module in hu-format-modules($hu-shadow-modules) {
+  @each $type, $value in $hu-display-types {
+    $class-name: hu-class-name(display-#{$type});
+    $value: if($value, $value, $type);
+
+    @include hu-pseudo($class-name, ("::before"), $module) {
+      display: $value;
+    }
+  }
+}
+
 @each $bp-scale, $bp-value in $hu-breakpoints {
-  @media (min-width: $bp-value) {
-    @each $type in $hu-display-types {
-      @include hu-pseudo-responsive(hu-class-name(display-#{$type}), ("::before"), $hu-shadow-modules, $bp-scale) {
-        display: $type;
+  @include hu-media-query($bp-value) {
+    @each $type, $value in $hu-display-types {
+      $class-name: hu-class-name(display-#{$type});
+      $value: if($value, $value, $type);
+
+      @include hu-pseudo-responsive($class-name, ("::before"), $hu-shadow-modules, $bp-scale) {
+        display: $value;
       }
     }
   }
