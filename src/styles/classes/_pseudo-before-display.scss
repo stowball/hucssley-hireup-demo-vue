@@ -1,4 +1,4 @@
-@each $module in hu-format-modules($hu-shadow-modules) {
+@each $module in hu-format-modules($hu-box-shadow-modules) {
   @each $type, $value in $hu-display-types {
     $class-name: hu-class-name(display-#{$type});
     $value: if($value, $value, $type);
@@ -15,7 +15,7 @@
       $class-name: hu-class-name(display-#{$type});
       $value: if($value, $value, $type);
 
-      @include hu-pseudo-responsive($class-name, ("::before"), $hu-shadow-modules, $bp-scale) {
+      @include hu-pseudo-responsive($class-name, ("::before"), $hu-box-shadow-modules, $bp-scale) {
         display: $value;
       }
     }
