@@ -14,9 +14,9 @@ export default {
       z-index-100
     `,
     container: `
+      bg-color-neutral-0
       display-flex
       justify-content-space-between
-      position-relative
       bp-1040--justify-content-flex-start
     `,
     logo: 'color-blue-600',
