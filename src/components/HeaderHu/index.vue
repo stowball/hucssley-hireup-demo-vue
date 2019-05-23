@@ -17,7 +17,7 @@ export default {
       bg-color-neutral-0
       display-flex
       justify-content-space-between
-      bp-1040--justify-content-flex-start
+      mq-1040--justify-content-flex-start
     `,
     logo: 'color-blue-600',
     logo__icon: `
@@ -29,9 +29,9 @@ export default {
       align-self-center
       border-radius-1000
       padding-300
-      bp-1040--display-none
       group__is-open--bg-color-neutral-300
       hocus--bg-color-neutral-300
+      mq-1040--display-none
     `,
     hamburger__icon: `
       icon-size-200
@@ -44,14 +44,14 @@ export default {
       pos-r-0
       pos-t-100
       position-absolute
-      bp-1040--display-flex
-      bp-1040--justify-content-space-between
-      bp-1040--position-static
-      bp-1040--width-100
-      bp-1040-pseudo-before--display-none
       group__is-open--display-block
-      group__bp-1040-is-open--display-flex
-      pseudo-before--dropdown-shadow-500
+      group__mq-1040-is-open--display-flex
+      mq-until-1039-pseudo-before--dropdown-shadow-500
+      mq-1040--display-flex
+      mq-1040--justify-content-space-between
+      mq-1040--position-static
+      mq-1040--width-100
+      mq-1040-pseudo-before--display-none
     `,
   },
   components: {

@@ -15,13 +15,13 @@
 }
 
 @if index($icon-size-modules, responsive) {
-  @each $bp-scale, $bp-value in $hu-breakpoints {
-    @include hu-media-query($bp-value) {
+  @each $mq-scale, $mq-value in $hu-media-queries {
+    @include hu-media-query($mq-value) {
       @each $type, $value in $icon-size-types {
         $class-name: hu-class-name(icon-size-#{$type});
         $value: if($value, $value, $type);
 
-        @include hu-responsive($class-name, $bp-scale, $icon-size-modules) {
+        @include hu-responsive($class-name, $mq-scale, $icon-size-modules) {
           @include _icon-size-declarations($value);
         }
       }

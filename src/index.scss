@@ -1,3 +1,21 @@
+$hu-themes: (
+  broncos: (
+    primary: #6c1d45,
+    secondary: #9e2b64,
+    highlight: #f8cc0d,
+  ),
+  knights: (
+    primary: #003b73,
+    secondary: #1d54a6,
+    highlight: #e82c2a,
+  ),
+  sharks: (
+    primary: #1f7eb2,
+    secondary: #27a3e6,
+    highlight: #95d1f2,
+  ),
+);
+
 @import "../node_modules/hucssley/src/helpers";
 
 @import "../node_modules/hucssley/src/variables/global/index";

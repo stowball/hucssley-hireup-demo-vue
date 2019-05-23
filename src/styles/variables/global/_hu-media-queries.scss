@@ -1,5 +1,6 @@
-$hu-breakpoints: (
+$hu-media-queries: (
   600: hu-em(600),
   768: hu-em(768),
+  until-1039: (max-w: hu-em(1039)),
   1040: hu-em(1040),
 );

@@ -14,10 +14,10 @@
 }
 
 @if index($hu-box-shadow-modules, responsive) {
-  @each $bp-scale, $bp-value in $hu-breakpoints {
-    @include hu-media-query($bp-value) {
+  @each $mq-scale, $mq-value in $hu-media-queries {
+    @include hu-media-query($mq-value) {
       @each $type, $value in $hu-box-shadow-types {
-        @include hu-pseudo-responsive(hu-class-name(dropdown-shadow-#{$type}), ("::before"), $hu-box-shadow-modules, $bp-scale) {
+        @include hu-pseudo-responsive(hu-class-name(dropdown-shadow-#{$type}), ("::before"), $hu-box-shadow-modules, $mq-scale) {
           @include _hu-pseudo-before-dropdown-shadow-declarations($value);
         }
       }

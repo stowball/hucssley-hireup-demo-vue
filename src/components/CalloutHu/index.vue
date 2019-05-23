@@ -18,8 +18,8 @@ export default {
       flex-direction-column
       padding-500
       text-align-center
-      bp-768--flex-direction-row
-      bp-768--text-align-left
+      mq-768--flex-direction-row
+      mq-768--text-align-left
     `,
     imageWrapper: `
       align-items-center
@@ -27,11 +27,11 @@ export default {
       justify-content-center
       margin-b-400
       width-50
-      bp-600--width-30
-      bp-768--margin-b-0
-      bp-768--margin-r-500
-      bp-768--width-20
-      bp-1040--width-16
+      mq-600--width-30
+      mq-768--margin-b-0
+      mq-768--margin-r-500
+      mq-768--width-20
+      mq-1040--width-16
     `,
     image: `
       bg-color-blue-600
@@ -44,7 +44,7 @@ export default {
       font-size-600
       font-weight-700
       line-height-200
-      bp-768--font-size-800
+      mq-768--font-size-800
     `,
     link: 'margin-t-400',
   },

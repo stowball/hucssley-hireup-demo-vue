@@ -7,9 +7,9 @@ export default {
       padding-b-300
       padding-h-400
       position-relative
-      bp-1040--display-flex
-      bp-1040--padding-0
-      bp-1040--margin-r-n600
+      mq-1040--display-flex
+      mq-1040--padding-0
+      mq-1040--margin-r-n600
     `,
     button: `
       color-blue-1000
@@ -51,12 +51,12 @@ export default {
     userNav: `
       bg-color-neutral-0
       display-none
-      bp-1040--border-t-width-0
-      bp-1040--pos-r-0
-      bp-1040--pos-t-100
-      bp-1040--position-absolute
-      bp-1040-pseudo-before--dropdown-shadow-600
       is-open--display-block
+      mq-1040--border-t-width-0
+      mq-1040--pos-r-0
+      mq-1040--pos-t-100
+      mq-1040--position-absolute
+      mq-1040-pseudo-before--dropdown-shadow-600
     `,
     userNav__item: `
       border-t-color-neutral-400
@@ -69,11 +69,11 @@ export default {
       color-neutral-700
       padding-h-400
       padding-v-300
-      bp-1040--padding-h-500
-      bp-1040--padding-v-400
       transition-duration-200
       transition-easing-ease
       transition-property-all
+      mq-1040--padding-h-500
+      mq-1040--padding-v-400
       hocus--bg-color-neutral-200
       hocus--color-neutral-900
     `,
