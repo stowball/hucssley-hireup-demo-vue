@@ -21,7 +21,7 @@ export default {
 
     <container-hu
       as="main"
-      class="margin-top-500"
+      class="margin-top:500"
     >
       <callout-hu
         image="https://hireup.cdn.prismic.io/hireup/89e15301c28e6396927d85e38e9c5d5833ebab09_kyle_357-bonnie.png"
@@ -31,12 +31,12 @@ export default {
       />
 
       <div>
-        <button-hu class="margin-right-500 margin-top-500">
+        <button-hu class="margin-right:500 margin-top:500">
           Primary
         </button-hu>
 
         <button-hu
-          class="margin-right-500 margin-top-500"
+          class="margin-right:500 margin-top:500"
           type="secondary"
         >
           Secondary
@@ -45,14 +45,14 @@ export default {
 
       <div>
         <button-hu
-          class="margin-right-500 margin-top-500"
+          class="margin-right:500 margin-top:500"
           shape="rounded"
         >
           Primary Rounded
         </button-hu>
 
         <button-hu
-          class="margin-right-500 margin-top-500"
+          class="margin-right:500 margin-top:500"
           shape="rounded"
           type="secondary"
         >
@@ -62,7 +62,7 @@ export default {
 
       <div>
         <button-hu
-          class="margin-right-500 margin-top-500"
+          class="margin-right:500 margin-top:500"
           size="large"
           type="primary"
         >
@@ -70,7 +70,7 @@ export default {
         </button-hu>
 
         <button-hu
-          class="margin-right-500 margin-top-500"
+          class="margin-right:500 margin-top:500"
           size="large"
           type="secondary"
         >
@@ -78,9 +78,9 @@ export default {
         </button-hu>
       </div>
 
-      <div class="margin-bottom-500">
+      <div class="margin-bottom:500">
         <button-hu
-          class="margin-right-500 margin-top-500"
+          class="margin-right:500 margin-top:500"
           shape="rounded"
           size="large"
           type="primary"
@@ -89,7 +89,7 @@ export default {
         </button-hu>
 
         <button-hu
-          class="margin-right-500 margin-top-500"
+          class="margin-right:500 margin-top:500"
           shape="rounded"
           size="large"
           type="secondary"

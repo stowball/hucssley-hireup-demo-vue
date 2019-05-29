@@ -5,7 +5,7 @@
 
 @each $module in hu-format-modules($icon-size-modules) {
   @each $type, $value in $icon-size-types {
-    $class-name: hu-class-name(icon-size-#{$type});
+    $class-name: hu-class-name("icon-size:#{$type}");
     $value: if($value, $value, $type);
 
     @include hu-generic($class-name, $module) {
@@ -18,7 +18,7 @@
   @each $mq-scale, $mq-value in $hu-media-queries {
     @include hu-media-query($mq-value) {
       @each $type, $value in $icon-size-types {
-        $class-name: hu-class-name(icon-size-#{$type});
+        $class-name: hu-class-name("icon-size:#{$type}");
         $value: if($value, $value, $type);
 
         @include hu-responsive($class-name, $mq-scale, $icon-size-modules) {

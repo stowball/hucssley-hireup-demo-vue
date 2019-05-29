@@ -12,11 +12,11 @@ export default {
 <template>
   <svg
     class="
-      display-inline-block
-      pointer-events-none
-      svg-fill-color-current
-      svg-fill-rule-even-odd
-      vertical-align-bottom
+      display:inline-block
+      pointer-events:none
+      svg-fill-color:current
+      svg-fill-rule:even-odd
+      vertical-align:bottom
     "
     focusable="false"
     role="img"

@@ -8,7 +8,7 @@
 }
 
 @each $type, $value in $hu-box-shadow-types {
-  @include hu-pseudo-generic-classes(dropdown-shadow-#{$type}, ("::before"), $hu-box-shadow-modules) {
+  @include hu-pseudo-generic-classes("dropdown-shadow:#{$type}", ("::before"), $hu-box-shadow-modules) {
     @include _hu-pseudo-before-dropdown-shadow-declarations($value);
   }
 }
@@ -17,7 +17,7 @@
   @each $mq-scale, $mq-value in $hu-media-queries {
     @include hu-media-query($mq-value) {
       @each $type, $value in $hu-box-shadow-types {
-        @include hu-pseudo-responsive(hu-class-name(dropdown-shadow-#{$type}), ("::before"), $hu-box-shadow-modules, $mq-scale) {
+        @include hu-pseudo-responsive(hu-class-name("dropdown-shadow:#{$type}"), ("::before"), $hu-box-shadow-modules, $mq-scale) {
           @include _hu-pseudo-before-dropdown-shadow-declarations($value);
         }
       }
