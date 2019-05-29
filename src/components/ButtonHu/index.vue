@@ -26,19 +26,19 @@ export default {
       },
       size: {
         medium: `
-          padding-h-400
-          padding-v-300
+          padding-horizontal-400
+          padding-vertical-300
         `,
         large: `
           font-size-600
-          padding-h-500
-          padding-v-400
+          padding-horizontal-500
+          padding-vertical-400
         `,
       },
     },
     span: `
       display-inline-block
-      margin-b-50
+      margin-bottom-50
     `,
   },
   props: {

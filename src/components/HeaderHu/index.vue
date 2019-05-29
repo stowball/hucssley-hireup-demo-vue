@@ -22,8 +22,8 @@ export default {
     logo: 'color-blue-600',
     logo__icon: `
       icon-size-logo
-      margin-r-400
-      margin-v-400
+      margin-right-400
+      margin-vertical-400
     `,
     hamburger: `
       align-self-center
@@ -40,9 +40,9 @@ export default {
     nav: `
       bg-color-neutral-0
       display-none
-      pos-l-0
-      pos-r-0
-      pos-t-100
+      pos-left-0
+      pos-right-0
+      pos-top-100
       position-absolute
       group__is-open--display-block
       group__mq-1040-is-open--display-flex

@@ -1,9 +1,9 @@
 <script>
 export default {
   styles: `
-    margin-h-auto
+    margin-horizontal-auto
     max-width-container
-    padding-h-600
+    padding-horizontal-600
   `,
   props: {
     as: {

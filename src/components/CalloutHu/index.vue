@@ -25,11 +25,11 @@ export default {
       align-items-center
       display-flex
       justify-content-center
-      margin-b-400
+      margin-bottom-400
       width-50
       mq-600--width-30
-      mq-768--margin-b-0
-      mq-768--margin-r-500
+      mq-768--margin-bottom-0
+      mq-768--margin-right-500
       mq-768--width-20
       mq-1040--width-16
     `,
@@ -46,7 +46,7 @@ export default {
       line-height-200
       mq-768--font-size-800
     `,
-    link: 'margin-t-400',
+    link: 'margin-top-400',
   },
   components: {
     ButtonHu,

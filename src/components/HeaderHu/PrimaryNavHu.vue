@@ -5,11 +5,11 @@ export default {
       display-flex
       flex-direction-column
       height-100
-      padding-b-300
-      padding-h-400
+      padding-bottom-300
+      padding-horizontal-400
       mq-1040--flex-direction-row
-      mq-1040--padding-l-0
-      mq-1040--padding-v-0
+      mq-1040--padding-left-0
+      mq-1040--padding-vertical-0
     `,
     item: 'display-flex',
     link: `

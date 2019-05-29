@@ -4,12 +4,12 @@ import SvgHu from '../SvgHu/index.vue';
 export default {
   styles: {
     root: `
-      padding-b-300
-      padding-h-400
+      padding-bottom-300
+      padding-horizontal-400
       position-relative
       mq-1040--display-flex
       mq-1040--padding-0
-      mq-1040--margin-r-n600
+      mq-1040--margin-right-n600
     `,
     button: `
       color-blue-1000
@@ -27,9 +27,9 @@ export default {
       flex-shrink-0 // ie11
     `,
     buttonUser: `
-      border-t-color-neutral-400
-      border-t-style-solid
-      border-t-width-100
+      border-top-color-neutral-400
+      border-top-style-solid
+      border-top-width-100
       justify-content-space-between
       width-100
       is-active--bg-color-blue-300
@@ -41,39 +41,39 @@ export default {
     button__caret: `
       align-self-center // ie11
       icon-size-100
-      margin-l-200
+      margin-left-200
     `,
     icon: `
       border-radius-1000
       icon-size-100
-      margin-r-300
+      margin-right-300
     `,
     userNav: `
       bg-color-neutral-0
       display-none
       is-open--display-block
-      mq-1040--border-t-width-0
-      mq-1040--pos-r-0
-      mq-1040--pos-t-100
+      mq-1040--border-top-width-0
+      mq-1040--pos-right-0
+      mq-1040--pos-top-100
       mq-1040--position-absolute
       mq-1040-pseudo-before--dropdown-shadow-600
     `,
     userNav__item: `
-      border-t-color-neutral-400
-      border-t-style-solid
-      border-t-width-100
+      border-top-color-neutral-400
+      border-top-style-solid
+      border-top-width-100
     `,
     userNav__link: `
       align-items-center
       display-flex
       color-neutral-700
-      padding-h-400
-      padding-v-300
+      padding-horizontal-400
+      padding-vertical-300
       transition-duration-200
       transition-easing-ease
       transition-property-all
-      mq-1040--padding-h-500
-      mq-1040--padding-v-400
+      mq-1040--padding-horizontal-500
+      mq-1040--padding-vertical-400
       hocus--bg-color-neutral-200
       hocus--color-neutral-900
     `,
