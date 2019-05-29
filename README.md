@@ -19,7 +19,7 @@ yarn run build
 
 1. Install Purgecss globally: `npm i -g purgecss`
 2. Create a build as above.
-3. `purgecss --config ./purgecss.config.js --out build/static/css/`
+3. `purgecss --config ./purgecss.config.js --out dist/css/`
 
 ### Run your tests
 ```
