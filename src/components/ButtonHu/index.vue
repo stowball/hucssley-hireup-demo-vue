@@ -7,17 +7,17 @@ export default {
         transition-duration:100
         transition-easing:ease
         transition-property:all
-        :hocus--scale:105
+        &:hocus--scale:105
       `,
       type: {
         primary: `
           bg-color:blue-1000
           color:neutral-0
-          :hocus--bg-color:blue-600
+          &:hocus--bg-color:blue-600
         `,
         secondary: `
           bg-color:blue-300
-          :hocus--bg-color:blue-400
+          &:hocus--bg-color:blue-400
         `,
       },
       shape: {

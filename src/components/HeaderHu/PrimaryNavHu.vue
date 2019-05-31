@@ -23,7 +23,7 @@ export default {
       transition-duration:300
       transition-easing:ease
       transition-property:bg-color
-      :hocus--bg-color:neutral-300
+      &:hocus--bg-color:neutral-300
       is-selected--bg-color:blue-300
     `,
   },

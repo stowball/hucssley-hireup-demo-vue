@@ -20,7 +20,7 @@ export default {
       transition-duration:300
       transition-easing:ease
       transition-property:bg-color
-      :hocus--bg-color:neutral-300
+      &:hocus--bg-color:neutral-300
     `,
     buttonMessages: `
       align-items:center
@@ -74,8 +74,8 @@ export default {
       transition-property:all
       @mq-1040--padding-horizontal:500
       @mq-1040--padding-vertical:400
-      :hocus--bg-color:neutral-200
-      :hocus--color:neutral-900
+      &:hocus--bg-color:neutral-200
+      &:hocus--color:neutral-900
     `,
   },
   components: {

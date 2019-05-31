@@ -30,7 +30,7 @@ export default {
       border-radius:1000
       padding:300
       group__is-open--bg-color:neutral-300
-      :hocus--bg-color:neutral-300
+      &:hocus--bg-color:neutral-300
       @mq-1040--display:none
     `,
     hamburger__icon: `

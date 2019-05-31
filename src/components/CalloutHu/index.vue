@@ -34,8 +34,8 @@ export default {
       @mq-1040--width:16
     `,
     image: `
-      bg-color-blue:600
-      border-color-neutral:500
+      bg-color:blue-600
+      border-color:neutral-500
       border-radius:1000
       border-style:solid
       border-width:200
