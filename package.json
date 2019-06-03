@@ -9,7 +9,7 @@
   },
   "dependencies": {
     "core-js": "^2.6.5",
-    "hucssley": "github:stowball/hucssley#syntax-refactor",
+    "hucssley": "github:stowball/hucssley#master",
     "vue": "^2.6.10"
   },
   "devDependencies": {
