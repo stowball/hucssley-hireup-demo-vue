@@ -8,13 +8,13 @@ export default {
   styles: {
     root: `
       group
-      bg-color:neutral-0
+      background-color:neutral-0
       box-shadow:500
       position:relative
       z-index:100
     `,
     container: `
-      bg-color:neutral-0
+      background-color:neutral-0
       display:flex
       justify-content:space-between
       @mq-1040--justify-content:flex-start
@@ -29,8 +29,8 @@ export default {
       align-self:center
       border-radius:1000
       padding:300
-      group__is-open--bg-color:neutral-300
-      &:hocus--bg-color:neutral-300
+      group__is-open--background-color:neutral-300
+      &:hocus--background-color:neutral-300
       @mq-1040--display:none
     `,
     hamburger__icon: `
@@ -38,7 +38,7 @@ export default {
       svg-fill-color:neutral-700
     `,
     nav: `
-      bg-color:neutral-0
+      background-color:neutral-0
       display:none
       pos-left:0
       pos-right:0

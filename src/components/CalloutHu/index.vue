@@ -4,12 +4,12 @@ import ButtonHu from '../ButtonHu/index.vue';
 export default {
   styles: {
     root: `
-      bg-color:blue-100
+      background-color:blue-100
       padding:500
     `,
     callout: `
       align-items:center
-      bg-color:neutral-0
+      background-color:neutral-0
       border-color:neutral-500
       border-radius:500
       border-style:solid
@@ -34,7 +34,7 @@ export default {
       @mq-1040--width:16
     `,
     image: `
-      bg-color:blue-600
+      background-color:blue-600
       border-color:neutral-500
       border-radius:1000
       border-style:solid
