@@ -5,7 +5,8 @@ module.exports = {
     {
       extractor: class {
         static extract(content) {
-          return content.match(/[A-Za-z0-9-_&:@<>]+/g) || [];
+          // eslint-disable-next-line no-useless-escape
+          return content.match(/[A-Za-z0-9-_&:@<>\/]+/g) || [];
         }
       },
       extensions: ['html', 'js'],

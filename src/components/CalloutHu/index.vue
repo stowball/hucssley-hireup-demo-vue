@@ -39,6 +39,7 @@ export default {
       border-radius:1000
       border-style:solid
       border-width:200
+      max-width:100
     `,
     title: `
       font-size:600

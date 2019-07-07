@@ -6,7 +6,6 @@ Vue.mixin({
       this.styles = this.$options.styles;
 
       this.states = {
-        isActive: 'is-active',
         isClosed: 'is-closed',
         isCollapsed: 'is-collapsed',
         isDisabled: 'is-disabled',
@@ -14,6 +13,7 @@ Vue.mixin({
         isHidden: 'is-hidden',
         isLoading: 'is-loading',
         isOpen: 'is-open',
+        isPressed: 'is-pressed',
         isSelected: 'is-selected',
         isVisible: 'is-visible',
       };

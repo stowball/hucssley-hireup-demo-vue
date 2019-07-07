@@ -29,7 +29,7 @@ export default {
       align-self:center
       border-radius:1000
       padding:300
-      group__is-open--background-color:neutral-300
+      group-is-open__background-color:neutral-300
       &:hocus--background-color:neutral-300
       @mq-1040--display:none
     `,
@@ -44,8 +44,8 @@ export default {
       pos-right:0
       pos-top:100
       position:absolute
-      group__is-open--display:block
-      group__@mq-1040-is-open--display:flex
+      group-is-open__display:block
+      group@mq-1040-is-open__display:flex
       @mq-until-1039:before--dropdown-shadow:500
       @mq-1040--display:flex
       @mq-1040--justify-content:space-between
